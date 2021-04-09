@@ -1,6 +1,5 @@
 package se.lexicon.teri.mvc_thymeleaf_exercises.controller;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,5 +43,10 @@ public class HomeController {
         }
         model.addAttribute("contacts", contacts);
         return "show-contacts";
+    }
+
+    @GetMapping("/about")
+    public String about() {
+        return "about";
     }
 }
